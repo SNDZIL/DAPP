@@ -1,0 +1,109 @@
+<h2>Welcome to transfer money v1</h2>
+
+<input type="text" id="payer_id" placeholder="Please enter payer address">
+<br>
+<input type="text" id="payee_id" placeholder="Please enter payee address">
+<br>
+<input type="number" id="amount_to_transfer" placeholder="Please enter the amount">
+<br>
+<button class="btn" onclick="transferMoney()">
+    Transfer Money
+</button>
+<br>
+<button class="btn" onclick="checkTransaction()">
+    View Transaction
+</button>
+
+<p id="view_payer_id"></p>
+<p id="view_payee_id"></p>
+<p id="view_amount"></p>
+
+<form action="/" method = "post">
+	<input type="submit" value = "Main">
+</form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+<script>
+    const contract_address = "0x179e64B4cDC03B78DfA446c7fD110C99d76227D8";
+    const contract_abi = [
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "_payer",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_payee",
+				"type": "address"
+			}
+		],
+		"name": "transferMoney",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "checkTransaction",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+
+
+    const web3 = new Web3(Web3.givenProvider);
+    console.log(web3);
+    const contract = new web3.eth.Contract(contract_abi, contract_address);
+    console.log(contract);
+
+    async function transferMoney(){
+        const accounts = await web3.eth.requestAccounts();
+        console.log(accounts);
+        const payer_address = document.getElementById("payer_id").value;
+        const payee_address = document.getElementById("payee_id").value;
+        const amount = document.getElementById("amount_to_transfer").value;
+        console.log(payer_address,payee_address,amount);
+        await contract.methods.transferMoney(amount,payer_address,payee_address).send({from: accounts[0]});
+    }
+
+    async function checkTransaction(){
+        const result = await contract.methods.checkTransaction().call();
+        const payer_address = result[0];
+        const payee_address = result[1];
+        const amount = result[2];
+
+        document.getElementById("view_payer_id").innerText = "Payer Address: "+payer_address;
+        document.getElementById("view_payee_id").innerText = "Payee Address: "+payee_address;
+        document.getElementById("view_amount").innerText = "Amount: "+amount;
+    }
+</script>
