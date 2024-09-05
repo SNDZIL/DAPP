@@ -6,6 +6,10 @@ app=Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/main', methods=['get', 'post'])
+def main():
+    return render_template("main.html")
+
 @app.route('/store_money',methods=["get","post"])
 def store_money():
     return render_template('store_money.html')
