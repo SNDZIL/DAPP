@@ -14,12 +14,12 @@ def main():
     current_time = datetime.datetime.now()
     conn = sqlite3.connect('dapp.db')
     c = conn.cursor()
-    c.execute("insert into user values(?, ?)",(r, current_time))
-    conn.commit()
-    # row = ""
-    # for row1 in c:
-    # row += str(row1)+"\n"
-    # print(row)
+    if r:
+        c.execute("insert into user values(?, ?)",(r, current_time))
+        conn.commit()
+    else:
+        c.execute("select name from user order by timestap desc limit 1")
+        r = c.fetchone()[0]
     c.close()
     conn.close()
     return render_template("main.html", r = r )

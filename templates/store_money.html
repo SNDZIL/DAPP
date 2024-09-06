@@ -91,7 +91,7 @@
         <button class="btn" onclick="getValue()">Get Stored Value</button>
         <br>
         <br>
-        <form action="/" method = "post" >
+        <form action="/main" method = "post" >
             <input type="submit" value = "Main" style="background-color: #007bff; color: white; border: none; cursor: pointer;">
         </form>
         <p id="storedValue"></p>
@@ -102,34 +102,34 @@
 
     <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
     <script>
-        const contractAddress = '0x9d63fd56fab58f414fd3a4b27ae0e099091ba89d'; // Replace with your contract address
+        const contractAddress = '0x57070218CF1BDC5dE8C1A95F17D04D895120f7b5'; // Replace with your contract address
         const contractABI = [
-            {
-                "inputs": [
-                    {
-                        "internalType": "uint256",
-                        "name": "num",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "store_m",
-                "outputs": [],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [],
-                "name": "view_m",
-                "outputs": [
-                    {
-                        "internalType": "uint256",
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            }
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "a",
+                    "type": "uint256"
+                }
+            ],
+            "name": "storeMoney",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "viewMoney",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
         ];
 
         const web3 = new Web3(Web3.givenProvider);
@@ -140,11 +140,11 @@
             const value = document.getElementById('moneyInput').value;
             console.log("value: " + value);
             console.log("accounts[0] " + accounts[0]);
-            await contract.methods.store_m(value).send({from: accounts[0]});
+            await contract.methods.storeMoney(value).send({from: accounts[0]});
         }
 
         async function getValue() {
-            const storedValue = await contract.methods.view_m().call();
+            const storedValue = await contract.methods.viewMoney().call();
             console.log("stored value " + storedValue);
             document.getElementById('storedValue').innerText = "Stored Value: " + storedValue;
         }
