@@ -3,95 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethereum DApp 5</title>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
+        .margin1{
+            padding: 2rem; 
+            background-color: #24272a; 
+            max-width: 28rem; 
+            border-radius: 1rem; 
             width: 100%;
+        }
+        .margin2{
+            margin-top: 1.5rem; 
+            margin-bottom: 1.5rem;
+        }
+        .margin3{
+            margin-left: 1.375rem; 
+        }
+        .font{
+            color: #ffffff; 
+            font-size: 0.875rem; 
+            line-height: 1.25rem; 
+            padding: 0.875rem; 
+            background-color: inherit; 
+        }
+        .inlinef{
+            display: inline-flex;
+        }
+        .cursor{
+            cursor: pointer; 
+        }
+        .center{
+            justify-content: center; 
+            align-items: center; 
+        }
+        .roundborder{
+            border: #848c96 solid 1px; 
+            border-radius: 9999px; 
+        }
+        .width{
+            width: 100%; 
+        }
+        .felx{
+            display: flex;
+        }
+        .flexco{
+            display: flex;
+            flex-direction: column;
+        }
+        .search{
+            color: #ffffff; font-size: 1rem; background-color: transparent; appearance: none; font-family: inherit;margin: 0;
+        }
+        .height{
+            height: 3rem;
+        }
+        .buttoncolor{
+            color: #141618; 
+            font-size: 1rem; 
+            line-height: 1.25rem; 
+            background-color: #43aefc; 
+        }
+        .textcenter{
             text-align: center;
         }
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        form {
-            margin: 15px 0;
-        }
-        input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 100%;
-            max-width: 300px;
-        }
-        input, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        p {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #007bff;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            h2 {
-                font-size: 20px;
-            }
-            input, button {
-                font-size: 14px;
-            }
-            p {
-                font-size: 16px;
-            }
-        }
+
+
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h2>Welcome to DAPP - Store and Transfer Money. May I know your name?</h2>
-        <form action="/main" method = "post">
-            <input type="text" name="q" required>
-            <br>
-            <input type="submit" value = "Enter">
-        </form>
-        <br>
+    <div style="background-color: #141618; color: #fff; height: 100%;">
+        <div>
+            <!-- 页面 -->
+            <div style="background-color: #141618; min-height: 100%; max-height: 100vh; display: flex; position: relative;">
+                <!-- 侧边 -->
+                <div style="flex-direction: column; max-width: 200px; min-width: 200px; display: flex; padding-top: 2rem; padding-bottom: 1.25rem; background-color: #24272a; border-right: solid 1px #848c9629; height: 100vh; z-index: 10; position: relative;">
+                    <!-- 图标处 -->
+                    <div style="padding-left: 1rem; padding-right: 1rem; align-items: center; flex-shrink: 0; display: flex;">
+                        <a style="outline: 2px solid transparent; outline-offset: 2px; color: inherit; text-decoration: inherit;" >
+                            <!-- <img style="display: none; outline: 2px solid; outline-offset: 2px; width: auto; height: 2rem; max-width: 100%; vertical-align: middle;" src="portfolio-logo-b0c23761.svg" alt="MyMetaMask" > -->
+                            <img src="/templates/portfolio-logo-dark-34c7653e.svg" alt="MyMetaMask" style="display: flex; outline: 2px solid transparent; outline-offset: 2px; width: auto; height: 2rem; max-width: 100%; vertical-align: middle;">
+                        </a>
+                    </div>
+                    <!-- 不知道什么处 -->
+                     <!-- <div style="box-shadow: rgba(80, 81, 106, 0.2) 0px 1px 4px; stroke: #ffffff; background-color: #24272a;border-color: #848c96; border-width: 1px; border-radius: .5rem; width: 1.25rem; height: 1.25rem; display: none; margin-top: -0.5rem; margin-right: -0.5rem; z-index: 50; right: 0; cursor: pointer; justify-content: center; align-items: center;">
+
+                     </div> -->
+                     <!-- 导航栏 -->
+                      <div style="overflow-y: auto; flex-direction: column; height: 100%; display: flex; margin-top: 1.5rem;">
+                        <nav style="margin-top: 2rem;">
+                            <!-- overview -->
+                            <a style="color: #bbc0c5; padding-left: 1rem; padding-right: 1rem; align-items: center; display: flex; position: relative; text-decoration: inherit;">
+                                <div style="justify-content: center; align-items: center; display: flex; margin-right: .5rem;">
+                                    <svg style="width:1.25rem; height:1.25rem; stroke:#bbc0c5; fill:none; display:block;" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 10L17.5 10M10 2.5L10 17.5M6.5 2.5H13.5C14.9001 2.5 15.6002 2.5 16.135 2.77248C16.6054 3.01217 16.9878 3.39462 17.2275 3.86502C17.5 4.3998 17.5 5.09987 17.5 6.5V13.5C17.5 14.9001 17.5 15.6002 17.2275 16.135C16.9878 16.6054 16.6054 16.9878 16.135 17.2275C15.6002 17.5 14.9001 17.5 13.5 17.5H6.5C5.09987 17.5 4.3998 17.5 3.86502 17.2275C3.39462 16.9878 3.01217 16.6054 2.77248 16.135C2.5 15.6002 2.5 14.9001 2.5 13.5V6.5C2.5 5.09987 2.5 4.3998 2.77248 3.86502C3.01217 3.39462 3.39462 3.01217 3.86502 2.77248C4.3998 2.5 5.09987 2.5 6.5 2.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </div>
+                                <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                    Overview
+                                </span>
+                            </a>
+                            <!-- move crypto -->
+                             <div style="margin-top: .75rem; color: #ffffff; font-weight: 600; padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem; gap: .5rem; align-items: center; display: flex; position: relative; cursor: pointer;">
+                                <svg style="width:1.25rem; height:1.25rem; fill:#43aefc; display:block;" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.9958 6.165H14.2775C13.7342 6.165 13.4625 6.82167 13.8467 7.20583L14.7308 8.09L13.4625 9.35833C12.2558 8.40583 10.7367 7.83167 9.08417 7.83167C5.1775 7.83167 2 11.0092 2 14.915C2 18.8208 5.1775 21.9983 9.08333 21.9983C12.9892 21.9983 16.1667 18.8208 16.1667 14.915C16.1667 13.2617 15.5933 11.7433 14.64 10.5367L15.9083 9.26833L16.7925 10.1525C17.1767 10.5367 17.8333 10.2642 17.8333 9.72167V7.00333C17.8333 6.54083 17.4583 6.165 16.9958 6.165ZM9.08333 20.3317C6.09667 20.3317 3.66667 17.9017 3.66667 14.915C3.66667 11.9283 6.09667 9.49833 9.08333 9.49833C12.07 9.49833 14.5 11.9283 14.5 14.915C14.5 17.9017 12.07 20.3317 9.08333 20.3317ZM22 9.08167C22 11.33 20.9675 13.3958 19.1675 14.7483C19.0175 14.8608 18.8417 14.915 18.6675 14.915C18.4142 14.915 18.1642 14.8 18 14.5825C17.7242 14.215 17.7983 13.6925 18.1658 13.4158C19.5425 12.3817 20.3333 10.8017 20.3333 9.0825C20.3333 6.09583 17.9033 3.66583 14.9167 3.66583C13.1975 3.66583 11.6175 4.45583 10.5825 5.83333C10.3067 6.20083 9.785 6.27417 9.41583 5.99917C9.04833 5.7225 8.97333 5.2 9.25 4.8325C10.6025 3.0325 12.6675 2 14.9167 2C18.8225 2 22 5.1775 22 9.08333V9.08167Z" class="fill-primary-default h-5 w-5 stroke-none"></path></svg>
+                                <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                    Move Crypto
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#43aefc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 stroke-primary-default"><polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                <div style="display: inline-block; background-color: #43aefc; width: 0.125rem; height: 1.5rem; right: 0; position: absolute;">
+                                </div>
+                             </div>
+                             <!-- Tokens -->
+                             <a style="color: #bbc0c5; padding-left: 1rem; padding-right: 1rem; align-items: center; padding-top: 0.5rem; padding-bottom: 0.5rem; display: flex; position: relative; text-decoration: inherit;">
+                                <div style="justify-content: center; align-items: center; display: flex; margin-right: .5rem;">
+                                    <svg style="width:1.25rem; height:1.25rem; fill:#bbc0c5; display:block; " viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.51667 16.4583C9.35833 16.4583 9.19167 16.4083 9.05833 16.3083C8.8 16.1167 8.69167 15.775 8.79167 15.4667L9.50833 13.1667L7.69167 11.6917C7.45 11.4833 7.35833 11.15 7.46667 10.85C7.575 10.55 7.86667 10.35 8.18333 10.35H10.475L11.2833 8.175C11.3917 7.875 11.6833 7.675 12 7.675C12.3167 7.675 12.6083 7.875 12.7167 8.175L13.525 10.35H15.8167C16.1333 10.35 16.425 10.55 16.5333 10.85C16.6417 11.15 16.55 11.4917 16.3083 11.7L14.5 13.175L15.25 15.45C15.35 15.7583 15.25 16.1 14.9917 16.2917C14.7333 16.4917 14.3833 16.5 14.1083 16.325L12.0083 14.9583L9.94167 16.3417C9.81667 16.425 9.66667 16.4667 9.51667 16.4667V16.4583ZM12 22C6.48333 22 2 17.5167 2 12C2 6.48333 6.48333 2 12 2C17.5167 2 22 6.48333 22 12C22 17.5167 17.5167 22 12 22ZM12 3.66667C7.40833 3.66667 3.66667 7.40833 3.66667 12C3.66667 16.5917 7.40833 20.3333 12 20.3333C16.5917 20.3333 20.3333 16.5917 20.3333 12C20.3333 7.40833 16.5917 3.66667 12 3.66667Z" class="fill-icon-alternative h-5 w-5 stroke-none"></path>
+                                    </svg>
+                                </div>
+                                <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                    Toekns
+                                </span>
+                            </a>
+                            <!-- NFTs -->
+                            <a style="color: #bbc0c5; padding-left: 1rem; padding-right: 1rem; align-items: center; padding-top: 0.5rem; padding-bottom: 0.5rem; display: flex; position: relative; text-decoration: inherit;">
+                                <div style="justify-content: center; align-items: center; display: flex; margin-right: .5rem;">
+                                    <svg style="width:1.25rem; height:1.25rem; fill:#bbc0c5; display:block;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.8333 2H6.16667C3.86667 2 2 3.86667 2 6.16667V17.8333C2 20.1333 3.86667 22 6.16667 22H17.8333C20.1333 22 22 20.1333 22 17.8333V6.16667C22 3.86667 20.1333 2 17.8333 2ZM20.3333 17.8333C20.3333 19.2083 19.2083 20.3333 17.8333 20.3333H6.16667C4.79167 20.3333 3.66667 19.2083 3.66667 17.8333V6.16667C3.66667 4.79167 4.79167 3.66667 6.16667 3.66667H17.8333C19.2083 3.66667 20.3333 4.79167 20.3333 6.16667V17.8333ZM6.16667 8.25C6.16667 7.1 7.1 6.16667 8.25 6.16667C9.4 6.16667 10.3333 7.1 10.3333 8.25C10.3333 9.4 9.4 10.3333 8.25 10.3333C7.1 10.3333 6.16667 9.4 6.16667 8.25ZM13.6667 9.5V7C13.6667 6.54167 14.0417 6.16667 14.5 6.16667H17C17.4583 6.16667 17.8333 6.54167 17.8333 7V9.5C17.8333 9.95833 17.4583 10.3333 17 10.3333H14.5C14.0417 10.3333 13.6667 9.95833 13.6667 9.5ZM10.475 14.7833C10.8 15.1083 10.8 15.6333 10.475 15.9583L8.80833 17.625C8.48333 17.95 7.95833 17.95 7.63333 17.625L5.96667 15.9583C5.64167 15.6333 5.64167 15.1083 5.96667 14.7833L7.63333 13.1167C7.95833 12.7917 8.48333 12.7917 8.80833 13.1167L10.475 14.7833ZM18.2083 16.6083C18.5417 17.1417 18.1583 17.8333 17.5333 17.8333H13.9667C13.3417 17.8333 12.9583 17.1417 13.2917 16.6083L15.075 13.7583C15.3917 13.2583 16.1167 13.2583 16.4333 13.7583L18.2167 16.6083H18.2083Z" class="fill-icon-alternative h-5 w-5 stroke-none"></path>
+                                    </svg>
+                                </div>
+                                <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                    NFTs
+                                </span>
+                            </a>
+                            <!-- Games -->
+                            <a style="color: #bbc0c5; padding-left: 1rem; padding-right: 1rem; align-items: center; padding-top: 0.5rem; padding-bottom: 0.5rem; display: flex; position: relative; text-decoration: inherit;">
+                                <div style="justify-content: center; align-items: center; display: flex; margin-right: .5rem;">
+                                    <svg style="width:1.25rem; height:1.25rem; fill:#bbc0c5; display:block;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_828_8092)">
+                                            <path d="M17.0833 14.1667H15.8333V13.3333C15.8333 12.8733 15.4608 12.5 15 12.5C14.5392 12.5 14.1667 12.8733 14.1667 13.3333V14.1667H10.8333V6.56083C12.27 6.19 13.3333 4.88333 13.3333 3.33333C13.3333 1.495 11.8383 0 10 0C8.16167 0 6.66667 1.495 6.66667 3.33333C6.66667 4.88333 7.73 6.19 9.16667 6.56083V14.1667H2.91667C1.30833 14.1667 0 15.475 0 17.0833C0 18.6917 1.30833 20 2.91667 20H17.0833C18.6917 20 20 18.6917 20 17.0833C20 15.475 18.6917 14.1667 17.0833 14.1667ZM8.33333 3.33333C8.33333 2.41417 9.08083 1.66667 10 1.66667C10.9192 1.66667 11.6667 2.41417 11.6667 3.33333C11.6667 4.2525 10.9192 5 10 5C9.08083 5 8.33333 4.2525 8.33333 3.33333ZM17.0833 18.3333H2.91667C2.2275 18.3333 1.66667 17.7725 1.66667 17.0833C1.66667 16.3942 2.2275 15.8333 2.91667 15.8333H17.0833C17.7725 15.8333 18.3333 16.3942 18.3333 17.0833C18.3333 17.7725 17.7725 18.3333 17.0833 18.3333Z" class="fill-icon-alternative">
+                                            </path>
+                                        </g>
+                                        <defs><clipPath id="clip0_828_8092">
+                                            <rect width="20" height="20"></rect>
+                                        </clipPath></defs>
+                                    </svg>
+                                </div>
+                                <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                    Games
+                                </span>
+                            </a>
+                        </nav>
+                      </div>
+                      <!-- 底部term of us -->
+                    <a style="color: #bbc0c5; padding-top: 1rem; padding-bottom: 1rem; padding-left: 1.5rem; padding-right: 1.5rem; border-top: solid 1px #848c9629; align-items: center; cursor: pointer; display: flex; text-decoration: inherit; margin-bottom: -1.25rem;">
+                        <div style="font-weight: 500; font-size: 0.875rem; line-height: 1.25rem; margin-right: 0.5rem;">
+                            Terms of Use
+                        </div>
+                        <svg style="width: 1rem;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+                <!-- 主屏幕 -->
+                <div style="overflow-y: auto; flex-direction: column; width: 100%; min-height: 100%; display: flex; position: relative;">
+                    <!-- 主区域 -->
+                    <main style="flex: 1 1 0%; isolation: isolate;">
+                        <!-- 外边框 -->
+                        <div style="margin: 1rem; padding-bottom: 2.5rem;">
+                            <!-- 内部 -->
+                            <div style="padding-top: 2rem; padding-bottom: 3rem; padding-left: 2.5rem; padding-right: 2.5rem; background-color: #141618;">
+                                <!-- 顶部swap -->
+                                <div style="padding-bottom: 2.25rem; padding-left: 1rem; padding-right: 1rem; justify-content: space-between; align-items: center; display: flex; margin-left: -1rem; margin-right: -1rem; position: relative;">
+                                    <!-- Swap -->
+                                    <div style="flex-direction: column; width: max-content; justify-content: flex-start; flex: 1 1 0%; display: flex;">
+                                        <div style="align-items: center; width: 100%; display: flex;">
+                                            <h3 style="font-size: 1.5rem; line-height: 2rem; color: #ffffff; font-weight: 700; margin: 0;">
+                                                MySwap
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <!-- 搜索栏 -->
+                                    <div style="display: flex; justify-content: flex-end; align-items: center; ">
+                                        <!-- 搜索栏 -->
+                                        <div style="display: flex;">
+                                            <div style="font-size: 0.8875rem; line-height: 1.25rem; padding-top: 0; padding-bottom: 0;">
+                                                <div style="position: relative;">
+                                                    <div style="width: 100%; position: relative;">
+                                                        <div style="align-items: center; height: 100%; display: flex; margin-left: 1rem; position: absolute;">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc0c5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height:1rem;">
+                                                                <circle cx="11" cy="11" r="8"></circle>
+                                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <input style="width: 18rem; color: #ffffff; padding-left: 2.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; padding-right: 1rem; border: 1px; border-radius: 0.5rem; font-size: 1rem; line-height: 1.5rem; background-color: transparent;appearance: none; font-family: inherit;margin: 0;" placeholder="Search for a token..." >
+                                                    </div>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 后续图标 -->
+                                        <div style="margin-left: 0.5rem;">
+                                            <div style="position: relative;">
+                                                <button style="color: #ffffff; font-size: 0.875rem; line-height: 1.25rem; padding: 0.875rem; background-color: inherit; border-color: #848c96; border-radius: 0.5rem; justify-content: center; display: inline-flex; cursor: pointer; background-image: none; text-transform: none; margin: 0; border: 0px;">
+                                                    <div style="text-overflow: ellipsis; white-space: nowrap; overflow: visible; align-items: center; flex: 1 1 0%; display: flex;">
+                                                        <div style="position: relative;">
+                                                            <img src="download.jpg" style=" --tw-ring-color:#848c9629; object-fit: cover; border-radius: 9999px; width: 0.75rem; margin-top: 0.75rem; height: 0.625rem; margin-left: -0.375rem; position: absolute; max-width: 100%; display: block;">
+                                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gas-pump" style=" height: 1rem; width:1rem;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                <path fill="#ffffff" d="M32 64C32 28.7 60.7 0 96 0H256c35.3 0 64 28.7 64 64V256h8c48.6 0 88 39.4 88 88v32c0 13.3 10.7 24 24 24s24-10.7 24-24V222c-27.6-7.1-48-32.2-48-62V96L384 64c-8.8-8.8-8.8-23.2 0-32s23.2-8.8 32 0l77.3 77.3c12 12 18.7 28.3 18.7 45.3V168v24 32V376c0 39.8-32.2 72-72 72s-72-32.2-72-72V344c0-22.1-17.9-40-40-40h-8V448c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32V64zM96 80v96c0 8.8 7.2 16 16 16H240c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16H112c-8.8 0-16 7.2-16 16z"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <span style="display: none; margin-left: 0.5rem;">
+                                                            3
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: 0.5rem;">
+                                            <button style="color: #ffffff; font-size: 0.875rem; line-height: 1.25rem; padding: 0.875rem; background-color: inherit; border-color: #848c96; border-radius: 0.5rem; justify-content: center; display: inline-flex; cursor: pointer; background-image: none; text-transform: none; margin: 0; border: 0px;">
+                                                <div style="text-overflow: ellipsis; white-space: nowrap; overflow: visible; align-items: center; flex: 1 1 0%; display: flex;">
+                                                    <div style="position: relative;">                                                    
+                                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bell" style="width:1.25rem; height:1.25rem;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                            <path fill="currentColor" d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112v25.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V208c0-61.9 50.1-112 112-112zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span style="display: none; margin-left: 0.5rem;">                                                    
+                                                    </span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <!-- 用户连接 -->
+                                        <div style="margin-left: 0.5rem;">
+                                            <button style="min-width: 9rem; background-color: #43aefc; color: #141618; font-size: .875rem; line-height: 1.25rem; text-align: center; padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 0.75rem; padding-right: 0.75rem; border-color: #43aefc; border-width: 1px; border-radius: 9999px; justify-content: center; align-items: center; cursor: pointer; display: flex;">
+                                                <span> 
+                                                    Connect wallet                                                 
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 兑换货币页面 -->
+                                <div style= "display: flex; height: calc(100vh - 20rem);" class="center">
+                                    <div style="padding: 2rem; background-color: #24272a; max-width: 28rem; border-radius: 1rem; width: 100%;">
+                                        
+                                        <div class="roundborder, flexco">
+                                            <h3 class="flex center width textcenter">Welcome to DAPP<br>Store and Transfer Money</h3>
+                                            <form action="/main" method = "post" class="center, width, roundborder, flexco, margin1">
+                                                <input type="text" name="q" required class="width search roundborder margin2 height textcenter"  placeholder="May I know your name?">
+                                                <input type="submit" value = "Enter" class="center width margin2 height roundborder buttoncolor cursor" >
+                                            </form>
+                                        </div>
+                                            
+
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
     </div>
+    
 </body>
 </html>
